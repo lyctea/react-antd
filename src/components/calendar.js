@@ -12,7 +12,7 @@ export default class myCalendar extends React.Component{
 
     render(){
         return (
-            <Calendar defaultValue={new date('2010-10-10')}
+            <Calendar defaultValue={new Date('2010-10-10')}
                       dateCellRender={this.dateCellRender}
                       mothCellRender={this.mothCellRender}/>
         )

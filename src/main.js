@@ -20,12 +20,12 @@ import 'font-awesome/css/font-awesome.min.css';
 import './main.css';
 
 //引入单个页面(包括嵌套的子页面)
-import MyTable from './components/table';
-import MyForm from './components/form';
-import MyChart from './components/chart';
-import MyAnimate from './components/animate';
-import MyCalendar from './components/calendar';
-import MyFetch from './components/fetch';
+import myTable from './components/table.js';
+import myForm from './components/form.js';
+import myChart from './components/chart.js';
+import myAnimate from './components/animate.js';
+import myCalendar from './components/calendar.js';
+import myCard from './components/fetch.js';
 
 const ACTIVE = { color : 'red'};
 
@@ -99,11 +99,11 @@ render((
     <Router history={hashHistory}>
         <Route path="/" component={Sider}>
             <IndexRoute path="myCard" component={myCard} />
-            <Route path="myTable" component={MyTable} />
-            <Route path="MyForm" component={MyForm} />
-            <Route path="MyChart" component={MyChart} />
-            <Route path="MyCalendar" component={MyCalendar} />
-            <Route path="MyAnimate" component={MyAnimate} />
+            <Route path="myTable" component={myTable} />
+            <Route path="myForm" component={myForm} />
+            <Route path="myChart" component={myChart} />
+            <Route path="myCalendar" component={myCalendar} />
+            <Route path="myAnimate" component={myAnimate} />
             <Route path="myCard" component={myCard} />
         </Route>
     </Router>

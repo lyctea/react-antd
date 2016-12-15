@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Select, Checbox, DatePicker, Col, Radio, Button,
+import { Form, Input, Select, Checkbox, DatePicker, Col, Radio, Button,
         Modal, message} from 'antd';
 
 const FormItem = Form.Item;
@@ -29,7 +29,7 @@ class myForm extends React.Component{
     }
     //隐藏弹框
     hideModal = () => {
-        this.setState({visible: true});
+        this.setState({visible: false});
     }
 
     render() {
@@ -129,10 +129,10 @@ class myForm extends React.Component{
                             onClick={this.showModal}>点击有惊喜</Button>
                 </FormItem>
 
-                <Model title="登录" visible={this.state.visible}
-                    onOK={this.hideMode} onCancel={this.hideModel}>
-                    这是一个model
-                </Model>
+                <Modal title="登录" visible={this.state.visible}
+                       onOk={this.hideModal} onCancel={this.hideModal}>
+                    这是一个modal
+                </Modal>
             </Form>
         )
     }

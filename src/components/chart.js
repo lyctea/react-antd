@@ -1,12 +1,12 @@
-import React from 'react';
-import Highcharts from 'highcharts';
+import React from 'react'
+import Highcharts from 'highcharts'
 
-export default class myChart extends React.Component{
+export default class myChart extends React.Component {
     randerChart = () => {
         var chart = new Highcharts.Chart({
             chart: {
-                renderTo: 'cantainer',
-                type: 'colum'
+                renderTo: 'container',
+                type: 'column'
             },
             title: {
                 text: null
@@ -24,7 +24,7 @@ export default class myChart extends React.Component{
                 }
             },
             tooltip: {
-                headerFormat: '<span style="font-size: 10px">{point.name}</span><table>',
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
                 pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
                 '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
                 footerFormat: '</table>',
@@ -54,18 +54,18 @@ export default class myChart extends React.Component{
                 data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
 
             }]
-
         })
     }
-    //组价加载完成调用randerChart函数
-    componentDidMount(){
+
+    componentDidMount() {
         this.randerChart()
     }
 
-    render(){
+    render() {
         return (
-            <div id="container" className="chart-box"></div>
+            <div id="container" className="chart-box">
+
+            </div>
         )
     }
-
 }
