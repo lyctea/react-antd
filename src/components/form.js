@@ -137,3 +137,7 @@ class myForm extends React.Component{
         )
     }
 }
+
+myForm = Form.create()(myForm);
+
+export default myForm;
